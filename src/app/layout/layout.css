@@ -1,0 +1,40 @@
+/* Estilos para la barra superior */
+.topbar {
+    display: flex;
+    /* Flexbox para alinear elementos horizontalmente */
+    justify-content: space-between;
+    /* Espacio entre la marca y el menú */
+    align-items: center;
+    /* Centrar verticalmente */
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.brand {
+    font-weight: 700;
+}
+
+/* Estilos para los enlaces del menú */
+.menu a {
+    margin-right: 10px;
+    text-decoration: none;
+    /* Quitar el subrayado típico de los enlaces */
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* Estilo especial cuando el enlace está activo (routerLinkActive) */
+.menu a.active {
+    font-weight: 700;
+    border: 1px solid #333;
+    /* Un borde para resaltar en qué página estamos */
+}
+
+.content {
+    padding: 16px;
+}
+
+.footer {
+    padding: 12px 16px;
+    border-top: 1px solid #ddd;
+}

@@ -1,0 +1,28 @@
+<!-- Encabezado superior. Se mantendrá fijo en todas las páginas. -->
+<header class="topbar">
+    <div class="brand">Sitio-Estructura</div>
+    <!-- Menú de navegación. -->
+    <nav class="menu">
+        <!-- routerLink: En lugar de href="", usamos esto para navegar sin recargar la página. -->
+        <!-- routerLinkActive="active": Si estamos en esta ruta, Angular le pone la clase CSS 'active' a este enlace. -->
+        <!-- [routerLinkActiveOptions]="{ exact: true }": Para el inicio (/), solo actívate si es EXACTAMENTE /, no /algo-mas. -->
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+        <a routerLink="/breadcrumbs" routerLinkActive="active">Breadcrumbs</a>
+        <a routerLink="/elementos" routerLinkActive="active">Elementos</a>
+        <a routerLink="/menu" routerLinkActive="active">Menú</a>
+        <a routerLink="/mapa-sitio" routerLinkActive="active">Mapa del sitio</a>
+    </nav>
+</header>
+
+<!-- Contenido principal. -->
+<main class="content">
+    <!-- <router-outlet>: Aquí es donde Angular muestra la página actual.
+       Analogía: Es el escenario del teatro. El marco (header/footer) es fijo, pero en este hueco cambia la obra (la página). -->
+    <app-breadcrums></app-breadcrums>
+    <router-outlet></router-outlet>
+</main>
+
+<!-- Pie de página. También fijo. -->
+<footer class="footer">
+    <small>Desarrollo Web Profesional 2026</small>
+</footer>

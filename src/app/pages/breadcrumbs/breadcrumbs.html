@@ -1,25 +1,62 @@
-<!-- Contenedor principal de navegación -->
-<!-- aria-label="breadcrumb" mejora la accesibilidad indicando qué es esta sección -->
-<nav class="breadcrumb" aria-label="breadcrumb">
+<div class="container mt-4 mb-5">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="border-bottom pb-2">Breadcrumbs (Migas de Pan)</h1>
+            <p class="lead">Componentes para indicar la ubicación del usuario dentro de la jerarquía del sitio.</p>
+        </div>
+    </div>
 
-    <!-- Itera sobre cada 'crumb' (miga) en la lista 'crumbs' de component.ts -->
-    <!-- 'let last = last' es una variable local que es true si es el último elemento -->
-    <ng-container *ngFor="let crumb of crumbs; let last = last">
+    <div class="alert alert-info" role="alert">
+        <i class="bi bi-info-circle-fill"></i> Nota: El breadcrumb funcional real del sitio se encuentra en la parte
+        superior del encabezado. Abajo se muestran variantes estilizadas.
+    </div>
 
-        <!-- Si NO es el último elemento, mostramos un enlace cliqueable -->
-        <!-- [routerLink] asigna la URL de destino -->
-        <a *ngIf="!last" [routerLink]="crumb.url">
-            {{ crumb.label }}
-        </a>
+    <!-- Standard Slash Style -->
+    <section class="mb-5">
+        <h3 class="mb-3 text-primary">Estilo Estándar (Slash)</h3>
+        <div class="card p-4 shadow-sm">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Biblioteca</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Datos</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
 
-        <!-- Si ES el último elemento, mostramos solo texto (página actual) -->
-        <!-- Usamos una clase diferente para estilarlo distinto -->
-        <span *ngIf="last" class="current">
-            {{ crumb.label }}
-        </span>
+    <!-- Chevron Style -->
+    <section class="mb-5">
+        <h3 class="mb-3 text-primary">Estilo Chevron (flechas)</h3>
+        <div class="card p-4 shadow-sm">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-chevron mb-0">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Catálogo</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Producto #42</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
 
-        <!-- Separador visual entre elementos (/) -->
-        <!-- Solo se muestra si NO es el último elemento -->
-        <span *ngIf="!last" class="separator">/</span>
-    </ng-container>
-</nav>
+    <!-- Background Style -->
+    <section class="mb-5">
+        <h3 class="mb-3 text-primary">Con Fondo Estilizado</h3>
+        <div class="card p-4 shadow-sm">
+            <nav aria-label="breadcrumb" class="bg-light p-3 rounded">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Proyectos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Detalles</li>
+                </ol>
+            </nav>
+            <nav aria-label="breadcrumb" class="bg-dark p-3 rounded mt-3">
+                <ol class="breadcrumb breadcrumb-dark mb-0">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)" class="text-white-50">Admin</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)" class="text-white-50">Usuarios</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Editar</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+</div>

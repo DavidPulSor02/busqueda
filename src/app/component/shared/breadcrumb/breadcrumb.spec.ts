@@ -1,23 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BreadcrumbsPage } from './breadcrumbs';
+import { BreadcrumbComponent } from './breadcrumb';
 
-describe('BreadcrumbsPage', () => {
-  let component: BreadcrumbsPage;
-  let fixture: ComponentFixture<BreadcrumbsPage>;
+describe('BreadcrumbComponent', () => {
+  let component: BreadcrumbComponent;
+  let fixture: ComponentFixture<BreadcrumbComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BreadcrumbsPage]
+      imports: [BreadcrumbComponent]
     })
       .compileComponents();
 
-    fixture = TestBed.createComponent(BreadcrumbsPage);
+    fixture = TestBed.createComponent(BreadcrumbComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  })
+  });
 });

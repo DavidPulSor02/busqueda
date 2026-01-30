@@ -1,0 +1,129 @@
+/* ===== ELEMENTOS – ESTILO PROFESIONAL ===== */
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+/* Descripción breve bajo el título */
+.card-description {
+    margin-bottom: 16px;
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    line-height: 1.5;
+}
+
+/* Texto estándar dentro de cards */
+.card-text {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.card {
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    box-shadow: none;
+    background-color: var(--bg-elevated);
+}
+
+.card-header {
+    background: transparent;
+    border-bottom: 1px solid var(--border-light);
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.card-body {
+    padding: 24px;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.lead {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+}
+
+.btn {
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 8px 16px;
+}
+
+.btn-primary {
+    background-color: var(--interactive-primary);
+    border-color: var(--interactive-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--interactive-primary-hover);
+    border-color: var(--interactive-primary-hover);
+}
+
+.btn-outline-primary {
+    color: var(--text-primary);
+    border-color: var(--border-strong);
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--interactive-primary);
+    color: #fff;
+    border-color: var(--interactive-primary);
+}
+
+.form-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.form-control {
+    border-radius: 10px;
+    font-size: 0.875rem;
+    padding: 10px 12px;
+    border-color: var(--border-strong);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.form-control:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 2px var(--interactive-hover-bg);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.form-text {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+}
+
+.list-group-item {
+    font-size: 0.875rem;
+    border-color: var(--border-light);
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+}
+
+.list-group-item.active {
+    background-color: var(--interactive-primary);
+    border-color: var(--interactive-primary);
+    color: #ffffff;
+}

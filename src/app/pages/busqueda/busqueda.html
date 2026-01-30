@@ -1,0 +1,94 @@
+<div class="container mt-4 mb-5">
+
+    <!-- TÍTULO -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="border-bottom pb-2">Búsqueda</h1>
+            <p class="lead">Interfaces para recuperación de información y filtrado de resultados.</p>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <!-- ===== FILTROS ===== -->
+        <div class="card shadow-sm mb-4 filters-card">
+            <div class="card-body">
+
+                <h5 class="card-title">Filtros</h5>
+
+                <div class="filter-group">
+                    <label>Tipo</label>
+                    <select class="form-select" [(ngModel)]="filters.type" (change)="doSearch()">
+                        <option value="todos">Todos</option>
+                        <option value="pagina">Páginas</option>
+                        <option value="seccion">Secciones</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Sección</label>
+                    <select class="form-select" [(ngModel)]="filters.section" (change)="doSearch()">
+                        <option value="todas">Todas</option>
+                        <option *ngFor="let s of sections" [value]="s">
+                            {{ s }}
+                        </option>
+                    </select>
+                </div>
+
+                <button class="btn-clear w-100" (click)="clear()">
+                    Limpiar filtros
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- ===== RESULTADOS ===== -->
+        <div class="col-md-9">
+
+            <!-- BUSCADOR -->
+            <div class="input-group mb-4">
+                <input type="text" class="form-control form-control-lg" placeholder="¿Qué estás buscando?"
+                    [(ngModel)]="query" (keyup.enter)="doSearch()">
+
+                <button class="btn btn-primary btn-lg" (click)="doSearch()">
+                    Buscar
+                </button>
+            </div>
+
+            <!-- MENSAJE -->
+            <ng-container *ngIf="results$ | async as results">
+                <p class="text-muted mb-4">
+                    Se encontraron {{ results.length }} resultado(s)
+                    <span *ngIf="query">para "<strong>{{ query }}</strong>"</span>
+                </p>
+
+                <!-- SIN RESULTADOS -->
+                <div *ngIf="results.length === 0" class="alert alert-light border">
+                    No se encontraron resultados. Intenta con otros términos.
+                </div>
+
+                <!-- RESULTADO -->
+                <div *ngFor="let item of results" class="card mb-3 shadow-sm border-0 result-card">
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a [routerLink]="item.path" class="text-decoration-none">
+                                {{ item.title }}
+                            </a>
+                        </h5>
+
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            {{ item.section }} · {{ item.type }}
+                        </h6>
+
+                        <p class="card-text">
+                            {{ item.description }}
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+
+        </div>
+    </div>
+</div>

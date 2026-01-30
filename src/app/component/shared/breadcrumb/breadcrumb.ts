@@ -25,14 +25,14 @@ type Crumb = {
 
 // Decorador @Component que define los metadatos del componente.
 @Component({
-  selector: 'app-breadcrums', // Nombre de la etiqueta HTML para usar este componente: <app-breadcrumb></app-breadcrumb>
+  selector: 'app-breadcrumbs', // Nombre de la etiqueta HTML para usar este componente: <app-breadcrumbs></app-breadcrumbs>
   standalone: true, // Indica que es un componente autónomo (no necesita NgModule).
   imports: [RouterModule, NgFor, NgIf], // Importa las dependencias necesarias directamente aquí.
-  templateUrl: './breadcrum.html', // Archivo HTML asociado.
-  styleUrls: ['./breadcrum.css'], // Archivos de estilos asociados.
+  templateUrl: './breadcrumb.html', // Archivo HTML asociado.
+  styleUrls: ['./breadcrumb.css'], // Archivos de estilos asociados.
 })
 // La clase implementa OnDestroy para manejar la limpieza de memoria.
-export class Breadcrumb implements OnDestroy {
+export class BreadcrumbComponent implements OnDestroy {
 
   // Array que almacenará las migas de pan actuales.
   crumbs: Crumb[] = [];

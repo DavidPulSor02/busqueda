@@ -1,0 +1,116 @@
+/* ================================
+   MAPA DEL SITIO – ESTILO PRO
+   ================================ */
+
+/* ===== TITULOS ===== */
+.container h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.container .lead {
+    font-size: 0.95rem;
+    color: var(--text-tertiary);
+}
+
+/* ===== CARD BASE ===== */
+.card {
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    background-color: var(--bg-elevated);
+}
+
+/* ================================
+   VISTA DE ÁRBOL
+   ================================ */
+
+.sitemap-tree,
+.sitemap-tree ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sitemap-tree ul {
+    margin-left: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Línea vertical */
+.sitemap-tree ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--border-medium);
+}
+
+.sitemap-tree li {
+    position: relative;
+    margin: 10px 0;
+}
+
+/* Línea horizontal */
+.sitemap-tree ul li::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -20px;
+    width: 20px;
+    height: 1px;
+    background-color: var(--border-medium);
+}
+
+/* Links */
+.sitemap-tree a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Nivel raíz */
+.sitemap-tree>li>a {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Hover */
+.sitemap-tree a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--text-muted);
+}
+
+/* ================================
+   VISTA DE REJILLA (FOOTER STYLE)
+   ================================ */
+
+.card h6 {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+    margin-bottom: 12px;
+}
+
+.card ul li {
+    margin-bottom: 6px;
+}
+
+.card ul li a {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.card ul li a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--text-muted);
+}

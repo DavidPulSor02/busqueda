@@ -1,0 +1,200 @@
+/* ================================
+   MENÚS – ELEGANTE & PROFESIONAL
+   ================================ */
+
+/* ===== TITULOS ===== */
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.lead {
+    font-size: 1rem;
+    color: var(--text-tertiary);
+}
+
+/* ===== CONTENEDORES ===== */
+.card {
+    border-radius: 18px;
+    border: 1px solid var(--border-medium);
+    box-shadow: none;
+    background-color: var(--bg-elevated);
+}
+
+/* ================================
+   NAVBAR HORIZONTAL
+   ================================ */
+.navbar {
+    background-color: var(--bg-primary) !important;
+    border-bottom: 1px solid var(--border-medium);
+}
+
+.navbar-brand {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary) !important;
+}
+
+.navbar-nav .nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary) !important;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--interactive-hover-bg);
+    color: var(--text-primary) !important;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: var(--interactive-hover-bg);
+    color: var(--text-primary) !important;
+}
+
+/* Search */
+.navbar .form-control {
+    font-size: 0.85rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-strong);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.navbar .btn-outline-light {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    border-color: var(--border-strong);
+}
+
+/* ================================
+   SIDEBAR
+   ================================ */
+.bg-dark {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary);
+}
+
+.bg-dark .fs-4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.bg-dark .nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+}
+
+.bg-dark .nav-link:hover {
+    background-color: var(--interactive-hover-bg);
+    color: var(--text-primary);
+}
+
+.bg-dark .nav-link.active {
+    background-color: var(--interactive-hover-bg);
+    color: var(--text-primary);
+}
+
+/* Separadores */
+.bg-dark hr {
+    border-color: var(--border-medium);
+}
+
+/* ================================
+   CONTENIDO PRINCIPAL
+   ================================ */
+.flex-grow-1 {
+    background-color: var(--bg-primary);
+}
+
+.flex-grow-1 h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.flex-grow-1 p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* ================================
+   TABS
+   ================================ */
+.nav-tabs {
+    border-bottom: 1px solid var(--border-medium);
+}
+
+.nav-tabs .nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    border: none;
+    padding: 10px 16px;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--text-primary);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--text-primary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--text-primary);
+    background: transparent;
+}
+
+/* ================================
+   MEGA MENU
+   ================================ */
+.card-header {
+    background-color: var(--bg-elevated);
+    border-bottom: 1px solid var(--border-medium);
+}
+
+.card-header .nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.card-header .nav-link:hover {
+    text-decoration: underline;
+}
+
+.card-body.bg-light {
+    background-color: var(--bg-secondary) !important;
+}
+
+.card-body h6 {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+}
+
+.card-body ul li {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+/* Oferta */
+.card-body .bg-white {
+    border-radius: 14px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border-medium);
+    background-color: var(--bg-elevated);
+}

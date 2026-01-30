@@ -1,40 +1,169 @@
-/* Estilos para la barra superior */
+/* ===============================
+   RESET SUAVE
+================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ===============================
+   TOPBAR
+================================ */
 .topbar {
     display: flex;
-    /* Flexbox para alinear elementos horizontalmente */
     justify-content: space-between;
-    /* Espacio entre la marca y el menú */
     align-items: center;
-    /* Centrar verticalmente */
-    padding: 12px 16px;
-    border-bottom: 1px solid #ddd;
+    padding: 14px 28px;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-medium);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Marca */
 .brand {
-    font-weight: 700;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.3px;
+    white-space: nowrap;
 }
 
-/* Estilos para los enlaces del menú */
+/* ===============================
+   MENU
+================================ */
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
 .menu a {
-    margin-right: 10px;
     text-decoration: none;
-    /* Quitar el subrayado típico de los enlaces */
-    padding: 6px 10px;
-    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
 }
 
-/* Estilo especial cuando el enlace está activo (routerLinkActive) */
+.menu a:hover {
+    background: var(--interactive-hover-bg);
+    color: var(--text-primary);
+}
+
 .menu a.active {
-    font-weight: 700;
-    border: 1px solid #333;
-    /* Un borde para resaltar en qué página estamos */
+    background: var(--interactive-primary);
+    color: #ffffff;
+    font-weight: 500;
 }
 
+/* ===============================
+   THEME TOGGLE BUTTON
+================================ */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    background: var(--bg-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.theme-toggle:hover {
+    background: var(--interactive-hover-bg);
+    border-color: var(--border-focus);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.theme-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===============================
+   SEARCH BAR
+================================ */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.search-bar input {
+    width: 180px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-bar input:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 2px var(--interactive-hover-bg);
+}
+
+.search-bar input::placeholder {
+    color: var(--text-muted);
+}
+
+.search-bar button {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    border: none;
+    background: var(--interactive-primary);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.search-bar button:hover {
+    background: var(--interactive-primary-hover);
+}
+
+/* ===============================
+   CONTENT
+================================ */
 .content {
-    padding: 16px;
+    padding: 32px 24px;
+    max-width: 1100px;
+    margin: auto;
+    background: var(--bg-primary);
 }
 
+/* ===============================
+   FOOTER
+================================ */
 .footer {
-    padding: 12px 16px;
-    border-top: 1px solid #ddd;
+    padding: 18px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    border-top: 1px solid var(--border-light);
+    margin-top: 40px;
+    background: var(--bg-primary);
 }

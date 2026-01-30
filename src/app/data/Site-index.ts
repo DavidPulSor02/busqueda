@@ -1,15 +1,15 @@
 export type SiteItemType = 'pagina' | 'seccion';
 
-export type SiteItem = {
+export interface SiteItem {
     id: string;
     title: string;
     description: string;
     path: string;          // ruta Angular, ej: '/menu'
-    type: SiteItemType;    // para filtrar (búsqueda avanzada)
-    section: string;       // para filtrar por tema/sección
-    keywords: string[];    // búsqueda simple
-    otro?: String;// el simbolo de interrogación indica que el atributo puede ser opcional
-};
+    type: SiteItemType;    // tipo para filtros
+    section: string;       // categoría o sección
+    keywords: string[];    // búsqueda
+    otro?: string;         // opcional
+}
 
 export const SITE_INDEX: SiteItem[] = [
     {
@@ -20,7 +20,7 @@ export const SITE_INDEX: SiteItem[] = [
         type: 'pagina',
         section: 'Estructura del sitio',
         keywords: ['inicio', 'home', 'principal', 'estructura'],
-        otro: "asdasd"
+        otro: 'asdasd',
     },
     {
         id: 'elementos',
@@ -38,16 +38,16 @@ export const SITE_INDEX: SiteItem[] = [
         path: '/menu',
         type: 'pagina',
         section: 'Navegación',
-        keywords: ['menu', 'navegación', 'navbar', 'links', 'persistente'],
+        keywords: ['menu', 'navegación', 'navbar', 'links'],
     },
     {
         id: 'breadcrumbs',
         title: 'Breadcrumbs',
-        description: 'Describe el funcionamiento y utilidad de los breadcrumbs.',
+        description: 'Funcionamiento y utilidad de los breadcrumbs.',
         path: '/breadcrumbs',
         type: 'pagina',
         section: 'Navegación',
-        keywords: ['breadcrumbs', 'migas', 'ruta', 'navegación', 'ux'],
+        keywords: ['breadcrumbs', 'migas', 'ruta', 'ux'],
     },
     {
         id: 'mapa',
@@ -56,15 +56,15 @@ export const SITE_INDEX: SiteItem[] = [
         path: '/mapa-sitio',
         type: 'pagina',
         section: 'Estructura del sitio',
-        keywords: ['mapa', 'sitio', 'sitemap', 'estructura', 'rutas'],
+        keywords: ['mapa', 'sitemap', 'estructura'],
     },
     {
         id: 'error404',
         title: 'Error 404',
-        description: 'Página para rutas no existentes (404).',
+        description: 'Página para rutas no existentes.',
         path: '/no-existe',
         type: 'seccion',
         section: 'Errores',
-        keywords: ['404', 'error', 'no encontrado', 'ruta'],
+        keywords: ['404', 'error', 'no encontrado'],
     },
 ];

@@ -1,1 +1,123 @@
-<p>elementos-sitio works!</p>
+<div class="container mt-4 mb-5">
+    <div class="row">
+        <div class="col-12 mb-4">
+            <h1 class="border-bottom pb-2">Elementos del Sitio</h1>
+            <p class="lead">Catálogo de componentes base utilizados en la construcción de páginas.</p>
+        </div>
+    </div>
+
+    <!-- Typography -->
+    <section class="mb-5">
+        <h2 class="mb-3 text-primary">Tipografía</h2>
+        <div class="card p-4 shadow-sm">
+            <h1>Encabezado H1</h1>
+            <h2>Encabezado H2</h2>
+            <h3>Encabezado H3</h3>
+            <h4>Encabezado H4</h4>
+            <h5>Encabezado H5</h5>
+            <h6>Encabezado H6</h6>
+            <hr>
+            <p>Esto es un párrafo estándar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis
+                lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            <p class="lead">Esto es un párrafo destacado (lead).</p>
+            <small class="text-muted">Esto es texto secundario o legal.</small>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="mb-5">
+        <h2 class="mb-3 text-primary">Botones</h2>
+        <div class="card p-4 shadow-sm">
+            <div class="mb-3">
+                <h5 class="card-title">Variantes</h5>
+                <button type="button" class="btn btn-primary me-2">Primary</button>
+                <button type="button" class="btn btn-secondary me-2">Secondary</button>
+                <button type="button" class="btn btn-success me-2">Success</button>
+                <button type="button" class="btn btn-danger me-2">Danger</button>
+                <button type="button" class="btn btn-warning me-2">Warning</button>
+                <button type="button" class="btn btn-info me-2">Info</button>
+                <button type="button" class="btn btn-light me-2">Light</button>
+                <button type="button" class="btn btn-dark me-2">Dark</button>
+                <button type="button" class="btn btn-link">Link</button>
+            </div>
+            <div class="mb-3">
+                <h5 class="card-title">Tamaños</h5>
+                <button type="button" class="btn btn-primary btn-lg me-2">Grande</button>
+                <button type="button" class="btn btn-primary me-2">Normal</button>
+                <button type="button" class="btn btn-primary btn-sm me-2">Pequeño</button>
+            </div>
+            <div>
+                <h5 class="card-title">Estados</h5>
+                <button type="button" class="btn btn-primary me-2" disabled>Deshabilitado</button>
+                <button type="button" class="btn btn-outline-primary me-2">Outline</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forms -->
+    <section class="mb-5">
+        <h2 class="mb-3 text-primary">Formularios</h2>
+        <div class="card p-4 shadow-sm">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Dirección de correo</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="nombre@ejemplo.com">
+                <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con nadie más.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Ejemplo de textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="formFile" class="form-label">Input de archivo</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="exampleDataList" class="form-label">Datalist ejemplo</label>
+                    <input class="form-control" list="datalistOptions" id="exampleDataList"
+                        placeholder="Escribe para buscar...">
+                    <datalist id="datalistOptions">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                    </datalist>
+                </div>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components -->
+    <section class="mb-5">
+        <h2 class="mb-3 text-primary">Otros Componentes</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Encabezado de Tarjeta
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Título de tarjeta</h5>
+                        <p class="card-text">Contenido de ejemplo para la tarjeta. Puede contener texto, imágenes o
+                            botones.</p>
+                        <a href="#" class="btn btn-primary">Ir a algún lugar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true">Elemento activo</li>
+                    <li class="list-group-item">Un segundo elemento</li>
+                    <li class="list-group-item">Un tercer elemento</li>
+                    <li class="list-group-item">Un cuarto elemento</li>
+                    <li class="list-group-item disabled" aria-disabled="true">Elemento deshabilitado</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>

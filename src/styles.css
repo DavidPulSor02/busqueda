@@ -1,1 +1,93 @@
-/* You can add global styles to this file, and also import other style files */
+/* ================================
+   GLOBAL STYLES & THEME SYSTEM
+   ================================ */
+
+/* ===== CSS VARIABLES - LIGHT THEME (DEFAULT) ===== */
+:root {
+    /* Background colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --bg-elevated: #ffffff;
+
+    /* Text colors */
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-tertiary: #6b7280;
+    --text-muted: #9ca3af;
+
+    /* Border colors */
+    --border-light: rgba(0, 0, 0, 0.05);
+    --border-medium: rgba(0, 0, 0, 0.06);
+    --border-strong: rgba(0, 0, 0, 0.12);
+    --border-focus: #111827;
+
+    /* Interactive elements */
+    --interactive-primary: #111827;
+    --interactive-primary-hover: #1f2937;
+    --interactive-secondary: #374151;
+    --interactive-hover-bg: rgba(0, 0, 0, 0.04);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.06);
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+}
+
+/* ===== CSS VARIABLES - DARK THEME ===== */
+body.dark-mode {
+    /* Background colors */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-elevated: #1e293b;
+
+    /* Text colors */
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --text-muted: #64748b;
+
+    /* Border colors */
+    --border-light: rgba(255, 255, 255, 0.05);
+    --border-medium: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.12);
+    --border-focus: #60a5fa;
+
+    /* Interactive elements */
+    --interactive-primary: #3b82f6;
+    --interactive-primary-hover: #2563eb;
+    --interactive-secondary: #64748b;
+    --interactive-hover-bg: rgba(255, 255, 255, 0.06);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.5);
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apply transitions to common elements */
+* {
+    transition: background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Prevent transitions on page load */
+.no-transition * {
+    transition: none !important;
+}

@@ -1,0 +1,140 @@
+/* ================================
+   HOME – DISEÑO PROFESIONAL REAL
+   ================================ */
+
+.home-container {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* ===== HERO ===== */
+.hero-section {
+    padding: 72px 24px;
+    background: var(--gradient-hero);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.hero-content {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.hero-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 720px;
+    margin: 0 auto 32px;
+}
+
+/* ===== HERO ACTIONS ===== */
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary-soft {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: var(--interactive-primary);
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary-soft:hover {
+    background-color: var(--interactive-primary-hover);
+}
+
+.btn-secondary-soft {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 1px solid var(--border-strong);
+    color: var(--text-primary);
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary-soft:hover {
+    background-color: var(--interactive-hover-bg);
+}
+
+/* ===== FEATURES ===== */
+.feature {
+    background-color: var(--bg-elevated);
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid var(--border-light);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ===== FEATURE ICON ===== */
+.feature-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== FEATURE TEXT ===== */
+.feature h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 18px 0 8px;
+    color: var(--text-primary);
+}
+
+.feature p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ===== FEATURE LINK ===== */
+.icon-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.icon-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== TESTIMONIAL ===== */
+blockquote p {
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+}

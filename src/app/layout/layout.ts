@@ -1,16 +1,53 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { Breadcrumb } from "../pages/breadcrumbs/breadcrumbs";
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { BreadcrumbComponent } from '../component/shared/breadcrumb/breadcrumb';
+
+
 
 @Component({
-  // El nombre de la etiqueta para usar este layout.
   selector: 'app-layout',
-  // standalone: true significa que este componente se manda solo, no necesita un módulo padre.
-  // Analogía: Es un trabajador autónomo, trae sus propias herramientas.
   standalone: true,
-  // Necesitamos importar RouterModule aquí para que funcionen los enlaces en el HTML del layout.
-  imports: [RouterModule, Breadcrumb],
+  imports: [RouterModule, FormsModule, BreadcrumbComponent],
   templateUrl: './layout.html',
-  styleUrls: ['./layout.css'] // Nota: Puede ser 'styleUrl' (singular) o 'styleUrls' (plural/array).
+  styleUrls: ['./layout.css']
 })
-export class Layout { }
+export class Layout implements OnInit {
+  quickQuery = '';
+  isDarkMode = false;
+
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    // Load saved theme preference from localStorage
+    const savedTheme = localStorage.getItem('theme');
+    this.isDarkMode = savedTheme === 'dark';
+    this.applyTheme();
+  }
+
+  toggleDarkMode(): void {
+    this.isDarkMode = !this.isDarkMode;
+    this.applyTheme();
+    // Save preference to localStorage
+    localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
+  }
+
+  private applyTheme(): void {
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }
+
+  goSearch(): void {
+    const q = (this.quickQuery || '').trim();
+
+    if (!q) return;
+
+    this.router.navigate(['/busqueda'], {
+      queryParams: { q }
+    });
+  }
+
+}

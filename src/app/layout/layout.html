@@ -1,28 +1,36 @@
-<!-- Encabezado superior. Se mantendrá fijo en todas las páginas. -->
 <header class="topbar">
-    <div class="brand">Sitio-Estructura</div>
-    <!-- Menú de navegación. -->
-    <nav class="menu">
-        <!-- routerLink: En lugar de href="", usamos esto para navegar sin recargar la página. -->
-        <!-- routerLinkActive="active": Si estamos en esta ruta, Angular le pone la clase CSS 'active' a este enlace. -->
-        <!-- [routerLinkActiveOptions]="{ exact: true }": Para el inicio (/), solo actívate si es EXACTAMENTE /, no /algo-mas. -->
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
-        <a routerLink="/breadcrumbs" routerLinkActive="active">Breadcrumbs</a>
-        <a routerLink="/elementos" routerLinkActive="active">Elementos</a>
-        <a routerLink="/menu" routerLinkActive="active">Menú</a>
-        <a routerLink="/mapa-sitio" routerLinkActive="active">Mapa del sitio</a>
-    </nav>
+    <div class="topbar-left">
+        <div class="brand">Sitio-Estructura</div>
+
+        <nav class="menu">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+            <a routerLink="/elementos" routerLinkActive="active">Elementos</a>
+            <a routerLink="/menu" routerLinkActive="active">Menú</a>
+            <a routerLink="/breadcrumbs" routerLinkActive="active">Breadcrumbs</a>
+            <a routerLink="/mapa-sitio" routerLinkActive="active">Mapa del sitio</a>
+            <a routerLink="/busqueda" routerLinkActive="active">Búsqueda</a>
+        </nav>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" (click)="toggleDarkMode()"
+        [attr.aria-label]="isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'" title="Cambiar tema">
+        <span class="theme-icon">{{ isDarkMode ? '☀️' : '🌙' }}</span>
+    </button>
+
+    <!-- Buscador rápido -->
+    <form class="search-bar" (submit)="$event.preventDefault(); goSearch()">
+        <input type="search" placeholder="Buscar contenido…" [(ngModel)]="quickQuery" name="quickQuery"
+            aria-label="Buscar" />
+        <button type="submit">Ir</button>
+    </form>
 </header>
 
-<!-- Contenido principal. -->
 <main class="content">
-    <!-- <router-outlet>: Aquí es donde Angular muestra la página actual.
-       Analogía: Es el escenario del teatro. El marco (header/footer) es fijo, pero en este hueco cambia la obra (la página). -->
-    <app-breadcrums></app-breadcrums>
+    <app-breadcrumbs></app-breadcrumbs>
     <router-outlet></router-outlet>
 </main>
 
-<!-- Pie de página. También fijo. -->
 <footer class="footer">
-    <small>Desarrollo Web Profesional 2026</small>
+    <small>Desarrollo Web Profesional</small>
 </footer>

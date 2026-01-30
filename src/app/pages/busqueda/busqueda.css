@@ -1,0 +1,141 @@
+/* ================================
+   SEARCH RESULTS – ESTILO PRO
+   ================================ */
+
+/* Card base */
+.result-card {
+    background-color: var(--bg-elevated);
+    border-radius: 14px;
+    padding: 18px 20px;
+    border: 1px solid var(--border-medium);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover sobrio (sin brincar) */
+.result-card:hover {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-strong);
+}
+
+/* ===== TÍTULO ===== */
+.result-card .card-title {
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.result-card .card-title a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+/* Hover tipo Google / Docs */
+.result-card .card-title a:hover {
+    color: var(--interactive-primary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+/* ===== DESCRIPCIÓN ===== */
+.result-card .card-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* ===== META INFO (opcional pero PRO) ===== */
+.result-meta {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    display: flex;
+    gap: 12px;
+}
+
+.result-meta span {
+    white-space: nowrap;
+}
+
+/* ===== ESTADO ACTIVO (focus / teclado) ===== */
+.result-card:focus-within {
+    border-color: var(--border-focus);
+    background-color: var(--bg-secondary);
+}
+
+/* ================================
+   SEARCH FILTERS – ESTILO PRO
+   ================================ */
+
+/* Card contenedora */
+.filters-card {
+    background-color: var(--bg-elevated);
+    border-radius: 16px;
+    border: 1px solid var(--border-medium);
+    padding: 18px 16px;
+}
+
+/* Título */
+.filters-card .card-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+}
+
+/* Grupo de filtro */
+.filter-group {
+    margin-bottom: 16px;
+}
+
+/* Label */
+.filter-group label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Select */
+.filter-group select {
+    font-size: 0.85rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-strong);
+    padding: 8px 10px;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Focus elegante */
+.filter-group select:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 2px var(--interactive-hover-bg);
+    outline: none;
+}
+
+/* Botón limpiar */
+.filters-card .btn-clear {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 999px;
+    background-color: transparent;
+    border: 1px solid var(--border-strong);
+    color: var(--text-secondary);
+    transition: all 0.15s ease;
+}
+
+/* Hover botón */
+.filters-card .btn-clear:hover {
+    background-color: var(--interactive-primary);
+    color: #ffffff;
+    border-color: var(--interactive-primary);
+}

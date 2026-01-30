@@ -2,11 +2,12 @@ import { Routes } from '@angular/router';
 import { Layout } from './layout/layout';
 import { Inicio } from './pages/inicio/inicio';
 import { ElementosSitio } from './pages/elementos-sitio/elementos-sitio';
+import { BreadcrumbsPage } from './pages/breadcrumbs/breadcrumbs';
 import { Menu } from './pages/menu/menu';
-import { Breadcrumb } from './pages/breadcrumbs/breadcrumbs';
 import { MapaSitio } from './pages/mapa-sitio/mapa-sitio';
 import { Error404 } from './pages/error-404/error-404';
- 
+import { BusquedaComponent } from './pages/busqueda/busqueda';
+
 export const routes: Routes = [
 
     {
@@ -24,14 +25,19 @@ export const routes: Routes = [
     },
     {
         path: 'breadcrumbs',
-        component: Breadcrumb
+        component: BreadcrumbsPage
     },
     {
-        path: 'mapa-sitio', 
+        path: 'mapa-sitio',
         component: MapaSitio
+    },
+    {
+        path: 'busqueda',
+        component: BusquedaComponent
     },
     {
         path: '**',
         component: Error404
     }
+
 ];

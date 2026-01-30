@@ -1,0 +1,159 @@
+<div class="container mt-4 mb-5">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="border-bottom pb-2">Estructuras de Menú</h1>
+            <p class="lead">Ejemplos de diferentes patrones de navegación utilizados en interfaces web.</p>
+        </div>
+    </div>
+
+    <!-- Horizontal Navbar Demo -->
+    <section class="mb-5">
+        <h3 class="mb-3 text-primary">Barra de Navegación Horizontal</h3>
+        <div class="card p-0 shadow-sm overflow-hidden">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="javascript:void(0)">Marca</a>
+                    <button class="navbar-toggler" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="javascript:void(0)">Activo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">Enlace</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button">
+                                    Desplegable
+                                </a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <div class="p-3 bg-light">
+                <p class="mb-0 text-muted small">Ejemplo visual de una barra de navegación estándar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Side Navigation Demo -->
+    <section class="mb-5">
+        <h3 class="mb-3 text-primary">Navegación Lateral (Sidebar)</h3>
+        <div class="card shadow-sm overflow-hidden">
+            <div class="d-flex" style="height: 300px;">
+                <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 250px;">
+                    <a href="javascript:void(0)"
+                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-4">Sidebar</span>
+                    </a>
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link active" aria-current="page">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="nav-link text-white">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="nav-link text-white">Ordenes</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="nav-link text-white">Productos</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="d-flex align-items-center text-white text-decoration-none">
+                            <strong>Usuario</strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 flex-grow-1 bg-light">
+                    <h4>Contenido Principal</h4>
+                    <p>El menú lateral es ideal para dashboards y aplicaciones complejas donde la navegación vertical
+                        permite listar más opciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Demo -->
+    <section class="mb-5">
+        <h3 class="mb-3 text-primary">Navegación por Pestañas (Tabs)</h3>
+        <div class="card p-3 shadow-sm">
+            <ul class="nav nav-tabs mb-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="javascript:void(0)">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Configuración</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Mensajes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Deshabilitado</a>
+                </li>
+            </ul>
+            <div class="p-3 bg-light border rounded">
+                <p class="mb-0">Contenido de la pestaña "Perfil". Las pestañas son excelentes para organizar contenido
+                    relacionado en un mismo contexto sin recargar la página.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mega Menu Concept -->
+    <section class="mb-5">
+        <h3 class="mb-3 text-primary">Concepto de Mega Menú</h3>
+        <div class="card shadow-sm">
+            <div class="card-header bg-white">
+                <ul class="nav nav-pills card-header-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Catálogo Completo &#9662;</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body bg-light">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h6 class="fw-bold text-uppercase text-muted">Electrónica</h6>
+                        <ul class="list-unstyled">
+                            <li>Computadoras</li>
+                            <li>Celulares</li>
+                            <li>Cámaras</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h6 class="fw-bold text-uppercase text-muted">Hogar</h6>
+                        <ul class="list-unstyled">
+                            <li>Muebles</li>
+                            <li>Cocina</li>
+                            <li>Decoración</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h6 class="fw-bold text-uppercase text-muted">Moda</h6>
+                        <ul class="list-unstyled">
+                            <li>Hombre</li>
+                            <li>Mujer</li>
+                            <li>Niños</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="p-3 bg-white border rounded text-center">
+                            <strong>Oferta del día</strong>
+                            <div class="bg-secondary bg-opacity-25 mt-2" style="height: 50px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

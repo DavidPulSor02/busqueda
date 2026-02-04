@@ -12,18 +12,20 @@
         </nav>
     </div>
 
-    <!-- Dark Mode Toggle -->
-    <button class="theme-toggle" (click)="toggleDarkMode()"
-        [attr.aria-label]="isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'" title="Cambiar tema">
-        <span class="theme-icon">{{ isDarkMode ? '☀️' : '🌙' }}</span>
-    </button>
-
+    
     <!-- Buscador rápido -->
     <form class="search-bar" (submit)="$event.preventDefault(); goSearch()">
         <input type="search" placeholder="Buscar contenido…" [(ngModel)]="quickQuery" name="quickQuery"
             aria-label="Buscar" />
         <button type="submit">Ir</button>
     </form>
+
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" (click)="toggleDarkMode()"
+        [attr.aria-label]="isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'" title="Cambiar tema">
+        <span class="theme-icon">{{ isDarkMode ? '☀️' : '🌙' }}</span>
+    </button>
+
 </header>
 
 <main class="content">
